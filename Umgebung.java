@@ -14,6 +14,7 @@ public class Umgebung {
   public Umgebung() {
     fenster = new GLEntwicklerkamera();
     fenster.zeigeAchsen(true);
+    fenster.setzePosition(500, 1000, 500);
     licht = new GLLicht();
   }
 }
