@@ -3,7 +3,7 @@ import GLOOP.*;
  * Basis-Ansicht für die Figur Turm.
  * 
  * @author Jean Dupont
- * @version 19.3.2021
+ * @version 3.4.2021
  */
 public class Turm {
   
@@ -20,7 +20,15 @@ public class Turm {
     this(200, 0);
   }
   
+  public Turm(boolean pWeiss) {
+    this (200, 0, pWeiss);
+  }
+  
   public Turm(double pX, double pZ) {
+    this (pX, pZ, true);
+  }
+  
+  public Turm(double pX, double pZ, boolean pWeiss) {
     stuetze = new GLKegelstumpf(pX, 200, pZ, 50, 55, 20);
     stuetze.drehe(90, 0, 0);
     mitte = new GLKegelstumpf(pX, 10 + 70 + 55, pZ, 70, 50, 110);
@@ -44,6 +52,18 @@ public class Turm {
     
     zinne4 = new Bogen(pX, 250 + 5, pZ, 70, 60, 55, 10);
     zinne4.drehe(90, 170, 0);
+    
+    if (!pWeiss) {
+      dach.setzeFarbe(0.1, 0.1, 0.1);
+      stuetze.setzeFarbe(0.1, 0.1, 0.1);
+      mitte.setzeFarbe(0.1, 0.1, 0.1);
+      sockel.setzeFarbe(0.1, 0.1, 0.1);
+      fuss.setzeFarbe(0.1, 0.1, 0.1);
+      zinne1.setzeFarbe(0.1, 0.1, 0.1);
+      zinne2.setzeFarbe(0.1, 0.1, 0.1);
+      zinne3.setzeFarbe(0.1, 0.1, 0.1);
+      zinne4.setzeFarbe(0.1, 0.1, 0.1);
+    }
   }
   
   

@@ -22,5 +22,15 @@ public class Umgebung {
     licht = new GLLicht();
     boden = new GLBoden("boden.jpg");
     himmel = new GLHimmel("himmel.jpg");
+    new Bauer();
+    new Turm();
+    new Laeufer();
+    new Dame();
+    new Koenig();
+    new Bauer(0, 200, false);
+    new Turm(200, 200, false);
+    new Laeufer(400, 200, false);
+    new Dame(600, 200, false);
+    new Koenig(800, 200, false);
   }
 }
